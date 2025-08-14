@@ -68,12 +68,6 @@ def EM_algorithm(df, priors, n_solvers, n_instances, n_tests, max_iter=100, tol=
 
     for itr in range(max_iter):
         # E-STEP
-        # w1 = fsi_hat * R
-        # w0 = (1 - fsi_hat) * R
-        # p0 = (w0 * (C / (N + eps))).sum() / (w0.sum() + eps)
-
-        # p1 = _map_update((w1 * (C / (N + eps))).sum(), w1.sum(), *priors["ab_bar"])
-
         a0, b0 = p0 * (1 / rho0 - 1), (1 - p0) * (1 / rho0 - 1)
         a1, b1 = p1 * (1 / rho1 - 1), (1 - p1) * (1 / rho1 - 1)
 
