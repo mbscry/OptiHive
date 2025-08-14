@@ -1,0 +1,11 @@
+{
+  'schedule': { # dict keyed by emitter index
+    0: [ (None, None), ... ], # each tuple (t_on, t_off) is an active interval for emitter 0
+    1: [ (None, None), ... ], # emitter 1’s active intervals
+    # ... more emitters
+  },
+
+  'objective_value': None,
+
+  'status': None
+}

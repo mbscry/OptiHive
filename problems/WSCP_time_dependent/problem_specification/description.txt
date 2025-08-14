@@ -1,0 +1,20 @@
+Given:
+- A continuous time interval [0, T]
+- A set of emitters defined by:
+  • a non‑negative operating cost incurred unit of time the emitter is active,
+  • a fixed two‑dimensional position (x, y),
+  • a positive coverage radius.
+- A set of clients. Each client moves at a constant speed and in straight line from (x1, y1) at t=0 to (x2, y2) at t=T.
+- An emitter is either active or inactive. Only active emitters can cover clients.
+- A client is considered covered at a given time if the straight‑line distance between the current client position and at least one active emitter is less than or equal to that emitter’s coverage radius.
+
+Task:
+- Choose an activation schedule for each emitter.
+- Minimize the total operating costs of the active emitters over the horizon.
+- All clients must be covered at any time of the horizon.
+
+Additional details:
+- A client may be covered by more than one emitter.
+- Activation and deactivations decisions are independent; an emitter can change its on/off state freely and at any time.
+- The schedules must be provided as explicit time interval endpoints
+- The solution is feasible if and only if, at any time of the horizon, every client is covered by at least one active emitter.

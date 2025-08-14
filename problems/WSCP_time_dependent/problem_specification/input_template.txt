@@ -1,0 +1,20 @@
+{
+  'T': None, # positive float or int – length of the time interval
+
+  'emitters': [ # list of emitter definitions, indexed by i
+    {
+      'cost': None, # float or int – non‑negative operating cost per unit time when active
+      'position': (None, None), # tuple[float, float] – (x, y) position of emitter i
+      'radius': None # float – positive coverage radius of emitter i
+    },
+    # ... more emitters
+  ],
+
+  'clients': [ # list of client definitions, indexed by j
+    {
+      'start_position': (None, None), # tuple[float, float] – (x, y) position of client j at time 0
+      'end_position': (None, None) # tuple[float, float] – (x, y) position of client j at time T
+    },
+    # ... more clients
+  ]
+}
