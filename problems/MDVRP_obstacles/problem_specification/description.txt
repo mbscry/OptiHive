@@ -1,0 +1,17 @@
+Given:
+- A set of vehicles, each having a unique start location ("start_point"). Each vehicle can travel from its start location and must return to its own start location. A vehicle may also remain unused (i.e., it does not move).
+- A set of target nodes ("goal_point"). Each target node must be visited exactly once by exactly one vehicle.
+- A set of obstacles, each obstacle defined as a line segment by two endpoints. Vehicles are prohibited from crossing or touching the interior of any obstacle, but may reach either endpoint of the obstacle line segment.
+- All positions (start points, goal points, and obstacle endpoints) are given as 2D coordinates in Euclidean space.
+
+Task:
+- For each vehicle, find a closed path (starting and ending at its own start point), such that:
+    - Each goal point is visited exactly once by exactly one vehicle.
+    - A vehicle may be unused (in which case its path remains at its start point).
+    - The path must not cross nor touch the open segement of any obstacle.
+    - Vehicles may touch or end at an obstacle endpoint if needed.
+- The overall objective is to minimize the sum of Euclidean distances traveled by all vehicles.
+
+Additional Details:
+- The path of each vehicle is a sequence of locations such that direct segments between consecutive locations do not cross the interior of any obstacle.
+- The problem is INFEASIBLE if and only if at least one goal is unreachable while strictly respecting the obstacle-avoiding rule.

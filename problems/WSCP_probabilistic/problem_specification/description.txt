@@ -1,0 +1,21 @@
+Given:
+- A set of emitters defined by:
+  • a non-negative cost,
+  • a two-dimensional position (x, y),
+  • a positive coverage radius,
+  • a probability of failure, at most equal to 0.2.
+- A set of clients defined by:
+  • a two-dimensional position (x, y),
+  • a minimum required probability of coverage, at most equal to 0.99.
+- A client is considered covered by an emitter if the emitter is active and if the straight-line distance between the client and the emitter is less than or equal to the emitter’s coverage radius.
+- An emitter is either selected or not selected. Only selected emitters can cover clients.
+
+Task:
+- Select a subset of emitters such that the total cost of the selected emitters is minimum.
+- The selected emitters must be chosen in a way that every client is covered with sufficient probability.
+
+Additional Details:
+- A client may be covered by more than one emitter.
+- The failures of emitters happen independently.
+- A client is considered covered as long as at least one of the selected and active emitters lies within its coverage radius.
+- The solution is feasible if only if all clients are covered with sufficient probability.

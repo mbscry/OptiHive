@@ -1,0 +1,5 @@
+{
+  'selected_emitters': [None, ...], # list of emitter indices selected in the final solution
+  'objective_value': None,
+  'status': None
+}

@@ -12,10 +12,16 @@ from langchain_core.output_parsers import StrOutputParser
 
 from func_timeout import func_timeout, FunctionTimedOut
 
+
+
 open_tag = "<<"
 close_tag = ">>"
 
 
+
+
+
+##### Utility functions #####
 
 @contextlib.contextmanager
 def suppress_output(to_devnull: bool = True):
@@ -172,7 +178,6 @@ def generate_solvers(solvers_file, problem_data, model, n_solvers, temperature =
 
 
 
-
 ##### Instances #####
 
 def generate_instance(problem_data, instances_file, model, n_instances):
@@ -241,6 +246,7 @@ def generate_instance(problem_data, instances_file, model, n_instances):
 
 
 ##### Tests #####
+
 def generate_validity_tests(problem_data, validity_tests_file, model, n_tests):
     if os.path.exists(validity_tests_file):
         with open(validity_tests_file, "rb") as file:

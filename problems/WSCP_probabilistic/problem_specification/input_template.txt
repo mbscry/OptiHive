@@ -1,0 +1,19 @@
+{
+  'emitters': [  # list of emitter definitions, indexed by i
+    {
+      'cost': None,          # float or int – non-negative cost to select this emitter
+      'position': (None, None),  # tuple[float, float] – (x, y) position of emitter i
+      'radius': None         # float – positive coverage radius of emitter i
+      'p_failure': None      # float - probability of failure in [0.01, 0.20] included
+    },
+    # ... more emitters
+  ],
+
+  'clients': [  # list of client definitions, indexed by j
+    {
+      'position': (None, None),  # tuple[float, float] – (x, y) position of client j
+      'p_required': None,        # float - minimum required probability of coverage in [0.80, 0.99]
+    },
+    # ... more clients
+  ]
+}

@@ -26,9 +26,7 @@ def maximal_component_selection(solvers):
     m.addConstr(quicksum(x_s.values()) >= 1, "c_min_solvers")
     m.addConstr(quicksum(x_i.values()) >= 1, "c_min_outputs")
     m.addConstr(quicksum(x_t.values()) >= 1, "c_min_validity_tests")
-
     m.setObjective(quicksum(x_s.values()) + quicksum(x_i.values()) + quicksum(x_t.values()), GRB.MAXIMIZE)
-
     m.optimize()
 
     S, I, T = [], [], []

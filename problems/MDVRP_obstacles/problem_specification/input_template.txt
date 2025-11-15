@@ -1,0 +1,20 @@
+{
+  "index": {
+    "description": "A list of numerical identifiers or placeholders for each entity. Use non-negative numbers for valid entries, and null (or NaN) for unused slots or entities without a specific index.",
+    "type": "list of numbers (float or int); can include null/NaN values",
+    "example": [0.0, 1.0, 2.0, 3.0, 4.0, null, null]
+  },
+  "type": {
+    "description": "A list specifying the category for each entity. Allowed values are 'start_point', 'goal_point', or 'obstacle'. Length matches 'index' and 'geometry' lists.",
+    "type": "list of strings ('start_point', 'goal_point', or 'obstacle')",
+    "example": ["start_point", "goal_point", "obstacle"]
+  },
+  "geometry": {
+    "description": "A list describing the position or shape of each entity. For 'start_point' and 'goal_point', use [x, y] coordinates as a list of two floats. For 'obstacle', use a list of two [x, y] coordinate pairs (i.e., [[x1, y1], [x2, y2]]), representing the endpoints of an obstacle segment.",
+    "type": "list; elements are either [float, float] for points or [[float, float], [float, float]] for obstacles",
+    "example": [
+      [0.02308, 0.23512],                           // point
+      [[0.76864, 0.34745], [0.15854, 0.15178]]     // obstacle segment
+    ]
+  }
+}

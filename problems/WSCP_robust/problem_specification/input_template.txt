@@ -1,0 +1,14 @@
+{
+  'emitters': [  # list of emitter definitions, indexed by i
+    {
+      'cost': None,          # float or int – non-negative cost to select this emitter
+      'position': (None, None),  # tuple[float, float] – (x, y) position of emitter i
+      'radius': None         # float – positive coverage radius of emitter i
+    },
+    # ... more emitters
+  ],
+
+  'clients': [(None, None), ...],  # list[tuple[float, float]] – clients[j] is the position (x, y) of client j
+
+  'K': None  # non negetive int – number of selected emitters the adversary may deactivate
+}

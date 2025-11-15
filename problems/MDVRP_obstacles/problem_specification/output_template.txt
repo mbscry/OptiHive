@@ -1,0 +1,23 @@
+{
+    "vehicle_paths": [
+        {
+            "vehicle_index": 0,  # Index of the vehicle in the list of start points
+            "path": [
+                [0.02308, 0.23512],      # Start at own start_point
+                [0.35957, 1.63950], [1.83644, 0.03847],  # Full obstacle-avoiding polyline: start, (goal and/or detour points), start
+                [0.02308, 0.23512]       # Must end at own start_point
+            ],
+            "distance": 0.0  # Total (obstacle-avoiding) distance traversed by this vehicle along its path
+        },
+        {
+            "vehicle_index": 1,
+            "path": [
+                [0.02308, 0.23512]      # If the vehicle is unused: [start_point (only)]
+            ],
+            "distance": 0.0
+        },
+        ...
+    ],
+    "objective_value": 0.0,  # The minimized total distance traveled by all vehicles
+    "status": "OPTIMAL"
+}

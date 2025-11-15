@@ -1,0 +1,24 @@
+{
+  "index": {
+    "description": "A unique, non-repeated numeric ID assigned to each point.",
+    "type": "list of numbers (float or int)",
+    "example": [0.0, 1.0, 2.0, 3.0, 4.0]
+  },
+  "type": {
+    "description": "A list specifying the category for each entity. Allowed values are 'start_point' or 'goal_point'. Length matches 'index' and 'geometry' lists.",
+    "type": "list of strings ('start_point' or 'goal_point')",
+    "example": ["start_point", "goal_point"]
+  },
+  "geometry": {
+    "description": "A list describing the position of each entity. For 'start_point' and 'goal_point', use [x, y] coordinates as a list of two floats.",
+    "type": "list; elements are [float, float] for points",
+    "example": [
+      [0.02308, 0.23512]                           // point
+    ]
+  },
+  "maximum_distance": {
+    "description": "A list specifying the maximum travel distance allowed for each vehicle. Use null (or NaN) for vehicles that do not have distance limit and for entries that do not correspond to a vehicle.",
+    "type": "list of numbers (float or int); can include NaN values.",
+    "example": [1.0, NaN, 2.0, NaN, NaN]
+  }
+}
