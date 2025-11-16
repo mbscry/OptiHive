@@ -1,5 +1,5 @@
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
-[![Paper](https://img.shields.io/badge/Paper-PDF-red)](AAAI_2026___OptiHive.pdf)
+[![Paper](https://img.shields.io/badge/Paper-PDF-red)](OptiHive_extended_version.pdf)
 [![arXiv](https://img.shields.io/badge/arXiv-2508.02503-b31b1b.svg)](https://arxiv.org/abs/2508.02503)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
